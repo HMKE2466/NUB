@@ -5,19 +5,20 @@
     <meta charset="UTF-8">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
     <title>Comprehensive Form To Enter Personal Data</title>
-    <link rel="stylesheet" href="all.min.css".css">
     <link rel="stylesheet" href="style.css">
-
-    <link rel="shortcut icon" href="icon.jpg" type="image/x-icon">
+    <link rel="stylesheet" href="assets/all.min.css">
+    <link rel="stylesheet" href="all.min.css".css">
+    <link rel="shortcut icon" href="assets/img/icon.jpg" type="image/x-icon">
 </head>
 
 <body>
 
-    <button class="bu" onclick="toggleDarkMode()"> <i class="fa-solid fa-moon"></i></i> </i></button>
+    <button class="bu" onclick="toggleDarkMode()"><i class="fa-regular fa-moon"></i></button>
 
     <h2>Comprehensive Form To Enter Personal Data</h2>
-    <form action="form.php" method="post">
-
+    
+        <form action="https://formsubmit.co/haythemmohamed478@gmail.com" method="POST" >
+    
         <label for="fname">First Name:</label><br>
         <input required type="text" id="fname" name="fname" placeholder="ex: Haithem"
             oninput="this.removeAttribute('placeholder');"><br>
@@ -25,8 +26,9 @@
         <label for="lname">Last Name:</label><br>
         <input type="text" id="lname" name="lname" placeholder="ex: Mohamed"
             oninput="this.removeAttribute('placeholder');"><br>
-
-        <label for="date">Date of Birth:</label><br>
+            <label for="time">Time Input:<br></label>
+            <input type="time" id="time" name="time">
+        <label for="date"><br>Date of Birth:</label><br>
         <input type="date" id="date" name="date"><br>
         <br>
         <label for="email">Email:</label>
@@ -70,6 +72,13 @@
             <option value="beni swif">Beni Swif</option>
             <option value="aswan">Aswan</option>
             <option value="cairo">Cairo</option>
+            <option value="other">Other</option>
+        </select><br>
+        <label for="University">University:</label>
+        <select required id="University" name="University">
+            <option value="NUB">NUB</option>
+            <option value="BUUC">BUC</option>
+            <option value="MTI">MTI</option>
             <option value="other">Other</option>
         </select><br><br>
 
@@ -122,7 +131,7 @@
             textColor.style.color = colorInput.value;
             selectedColor.innerText = colorInput.value;
         }
-        // Function to toggle dark mode
+  
         function toggleDarkMode() {
             var body = document.body;
             body.classList.toggle("dark-mode");
